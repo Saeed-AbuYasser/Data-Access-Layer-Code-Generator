@@ -9,3 +9,4 @@ it should be prcise, and well presented.
 ## 4. Installation & Using Instructions for Users
 ## 5. Installation & Using Instructions for Devs
 ## 6. Contributors Expectations
+## 7. Known Issues (Work in Progress)
