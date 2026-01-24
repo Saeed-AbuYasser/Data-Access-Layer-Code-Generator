@@ -11,13 +11,22 @@ it assume that user have already created the stored procedures he need to build 
 <li>auto detects the databases in server</li>
 <li>allows user to choose between local databases</li>
 <li>auto reads to stored procedures meta data from the choosen database</li>
+<li>creates DTOs based on the create's stored procedure of each table and allows user to choose between them</li>
+<li>Assigns each stored procedure to its corresponding DTO</li>
 <li>tries to classify stored procedures based on two factors, entity name (User, Person, License, etc...), and operation type (Create, Read, Update, Delete)</li>
 <li>in order to have correct classification, it assume that user has already defined stored procedures names like the following pattern "sp_OperationType_EntityName(singular)"</li>
 </ol>
-<hr>
 </section>
+<hr>
+<section>
+  <h2>Visual Overview:</h2>
+  <img src="https://raw.githubusercontent.com/Saeed-AbuYasser/Data-Access-Layer-Code-Generator/refs/heads/main/Assets/Code%20Generator%20video.gif">
+  <br>
+</section>
+<hr>
+<section>
 <h2>Next Version Expectations</h2>
 <ul>
 <li>basic CRUD Operation's Stored procedures code generator based on clean defined tables</li>
 </ul>
-<section>
+</section>
