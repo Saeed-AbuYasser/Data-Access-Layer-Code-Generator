@@ -314,7 +314,12 @@ namespace BusinessLogicDALCodeGenerator.ServerInfo
             }
             foreach(var dto in dtos)
             {
-                dto.StoredProcedures = [.. procedures.Where(p => dto.Name.Contains(p.EntityName))];
+                //dto.StoredProcedures = [.. procedures.Where(p => dto.Name.Contains(p.EntityName))];
+                dto.StoredProcedures = [.. procedures.Where(p => dto.Name.Substring(0,dto.Name.Length-3) == p.EntityName)];
+                // old statements issues:
+                // if DTO name is 'UserPermission' and entity name is 'User' or 'Permission' then Contains function will return true
+                // while we need it to return true only when entity name is 'UserPermission', which is the exact same name of the dto
+                // exept for the last three letters (which are the 'DTO' suffix).
             }
             
             return dtos;
