@@ -445,25 +445,30 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
         {
             sp_Procedure? procedure = dto.StoredProcedures.FirstOrDefault(sp=>sp.OperationType == enCRUDOperations.Delete);
             if(procedure == null)return "";
-            string parameters = string.Empty;
+            string SPparameters = string.Empty;
+            string FNParameters = string.Empty;
+            int NumOfPars = 0;
             foreach (var param in procedure.Parameters)
             {
                 if (!param.IsOutput)
                 {
-                    parameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{dto.Name.ToLower()}.{param.Name});{Environment.NewLine}                ";
+                    SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
+                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {
-                    parameters += $@"var Output{param.Name}Param = new SqlParameter(""@{param.Name}"", SqlDbType.{param.SqlDBType})
+                    SPparameters += $@"var Output{param.Name}Param = new SqlParameter(""@{param.Name}"", SqlDbType.{param.SqlDBType})
                 {{
                     Direction = ParameterDirection.Output
                 }};
                 command.Parameters.Add(Output{param.Name}Param);
                 ";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
             }
+
             string result = $@"
-    public static bool {procedure.CommandName + procedure.EntityName}({dto.Name} {dto.Name.ToLower()})
+    public static bool {procedure.CommandName + procedure.EntityName}({FNParameters})
     {{
         bool result = false;
         try
@@ -474,10 +479,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 using(SqlCommand command = new SqlCommand(""{procedure.OriginalName}"",connection))
                 {{
                     command.CommandType = CommandType.StoredProcedure;
-                    {parameters}
-                    
-                    var ReturnParameter = command.Parameters.Add(""@ReturnVal"", SqlDbType.Int);
-                    ReturnParameter.Direction = ParameterDirection.ReturnValue;
+                    {SPparameters}
                     
                     result = command.ExecuteNonQuery() > 0;
                 }}
