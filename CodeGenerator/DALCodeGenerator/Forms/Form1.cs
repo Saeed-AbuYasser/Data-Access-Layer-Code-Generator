@@ -66,6 +66,7 @@ namespace DALCodeGenerator
                 ChangeStoredProceduresInComboBoxes();
 
             }
+            ChangeCheckBoxesCheckability();
         }
         private void Empty_SpComboBoxes()
         {
@@ -217,6 +218,73 @@ namespace DALCodeGenerator
             chbReadOneByID.Enabled = Enabled;
             chbCreate.Enabled = Enabled;
 
+        }
+        private void ChangeCheckBoxesCheckability()
+        {
+            if (cbDeletesp.Enabled && cbDeletesp.SelectedItem.ToString() == "None")
+            {
+                chbDelete.Checked = false;
+            }
+            else 
+            {
+                chbDelete.Checked = true;
+            }
+            if (cbUpdatesp.Enabled && cbUpdatesp.SelectedItem.ToString() == "None")
+            {
+                chbUpdate.Checked = false;
+            }
+            else
+            {
+                chbUpdate.Checked = true;
+            }
+            if (cbReadAllsp.Enabled && cbReadAllsp.SelectedItem.ToString() == "None")
+            {
+                chbReadAll.Checked = false;
+            }
+            else
+            {
+                chbReadAll.Checked = true;
+            }
+            if (cbExistsByOthersp.Enabled && cbExistsByOthersp.SelectedItem.ToString() == "None")
+            {
+                chbExistsByOther.Checked = false;
+            }
+            else
+            {
+                chbExistsByOther.Checked = true;
+            }
+            if (cbExistsByIDsp.Enabled && cbExistsByIDsp.SelectedItem.ToString() == "None")
+            {
+                chbExistsByID.Checked = false;
+            }
+            else
+            {
+                chbExistsByID.Checked = true;
+            }
+            if (cbReadOneByOthersp.Enabled && cbReadOneByOthersp.SelectedItem.ToString() == "None")
+            {
+                chbReadOneByOther.Checked = false;
+            }
+            else
+            {
+                chbReadOneByOther.Checked = true;
+            }
+            if (cbReadOneByIDsp.Enabled && cbReadOneByIDsp.SelectedItem.ToString() == "None")
+            {
+                chbReadOneByID.Checked = false;
+            }
+            else
+            {
+                chbReadOneByID.Checked = true;
+            }
+            if (cbCreatesp.Enabled && cbCreatesp.SelectedItem.ToString() == "None")
+            {
+                chbCreate.Checked = false;
+            }
+            else
+            {
+                chbCreate.Checked = true;
+            }
         }
 
 
