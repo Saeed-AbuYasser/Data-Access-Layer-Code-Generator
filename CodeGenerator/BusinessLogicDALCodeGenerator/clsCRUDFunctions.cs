@@ -343,7 +343,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             int NumOfPars = 0;
             foreach (var param in procedure.Parameters)
             {
-                if (!param.IsOutput)
+                if (param.IsOutput)
                 {
                     SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
                     FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
