@@ -220,7 +220,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 if (!param.IsOutput)
                 {
                     SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
-                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)?.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {
@@ -349,7 +349,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 if (!param.IsOutput)
                 {
                     SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
-                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)?.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {

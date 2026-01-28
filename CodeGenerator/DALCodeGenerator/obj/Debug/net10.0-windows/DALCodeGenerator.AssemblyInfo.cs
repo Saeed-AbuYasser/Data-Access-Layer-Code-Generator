@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DALCodeGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ca8c8648b6fc9a1c9491c04fa8b411d360caf2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12309829a32cef0ad79e940a6a964d9b97c91f0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DALCodeGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DALCodeGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
