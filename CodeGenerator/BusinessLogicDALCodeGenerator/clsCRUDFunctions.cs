@@ -428,7 +428,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                     
                     command.ExecuteNonQuery();
                     
-                    result = ((int)ReturnParameter.Value == 1);
+                    result = ((int)ReturnParameter.Value > 1);
                 }}
             }}
         }}

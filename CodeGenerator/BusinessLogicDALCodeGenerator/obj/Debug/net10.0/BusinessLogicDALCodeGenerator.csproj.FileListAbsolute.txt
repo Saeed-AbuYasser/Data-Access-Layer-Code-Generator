@@ -10,3 +10,16 @@ D:\03-C#\After\CodeGeneratorRepo\BusinessLogicDALCodeGenerator\obj\Debug\net10.0
 D:\03-C#\After\CodeGeneratorRepo\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\refint\BusinessLogicDALCodeGenerator.dll
 D:\03-C#\After\CodeGeneratorRepo\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.pdb
 D:\03-C#\After\CodeGeneratorRepo\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\ref\BusinessLogicDALCodeGenerator.dll
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\bin\Debug\net10.0\BusinessLogicDALCodeGenerator.deps.json
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\bin\Debug\net10.0\BusinessLogicDALCodeGenerator.dll
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\bin\Debug\net10.0\BusinessLogicDALCodeGenerator.pdb
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.csproj.AssemblyReference.cache
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.AssemblyInfoInputs.cache
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.AssemblyInfo.cs
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.csproj.CoreCompileInputs.cache
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.sourcelink.json
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.dll
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\refint\BusinessLogicDALCodeGenerator.dll
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\BusinessLogicDALCodeGenerator.pdb
+D:\09-Projects\ADO DAL Code Generator\Data-Access-Layer-Code-Generator\CodeGenerator\BusinessLogicDALCodeGenerator\obj\Debug\net10.0\ref\BusinessLogicDALCodeGenerator.dll

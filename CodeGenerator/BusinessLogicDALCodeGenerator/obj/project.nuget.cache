@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dI3/qfx+MqE=",
+  "dgSpecHash": "YzcaEwZvj98=",
   "success": true,
-  "projectFilePath": "D:\\03-C#\\After\\CodeGeneratorRepo\\BusinessLogicDALCodeGenerator\\BusinessLogicDALCodeGenerator.csproj",
+  "projectFilePath": "D:\\09-Projects\\ADO DAL Code Generator\\Data-Access-Layer-Code-Generator\\CodeGenerator\\BusinessLogicDALCodeGenerator\\BusinessLogicDALCodeGenerator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ratra\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\ratra\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
