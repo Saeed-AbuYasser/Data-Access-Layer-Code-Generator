@@ -55,7 +55,7 @@
               "RelativeDocumentMoniker": "..\\BusinessLogicDALCodeGenerator\\clsCRUDFunctions.cs",
               "ToolTip": "D:\\09-Projects\\ADO DAL Code Generator\\Data-Access-Layer-Code-Generator\\CodeGenerator\\BusinessLogicDALCodeGenerator\\clsCRUDFunctions.cs",
               "RelativeToolTip": "..\\BusinessLogicDALCodeGenerator\\clsCRUDFunctions.cs",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAuwK4BAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAANEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T08:14:23.665Z",
               "EditorCaption": ""
@@ -70,8 +70,7 @@
               "RelativeToolTip": "Controls\\ctrlDataSet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T09:03:45.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T09:03:45.626Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "ToolTip": "D:\\09-Projects\\ADO DAL Code Generator\\Data-Access-Layer-Code-Generator\\CodeGenerator\\DALCodeGenerator\\Forms\\Form1.cs [Design]",
               "RelativeToolTip": "Forms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T09:02:05.759Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-16T09:02:05.759Z"
             },
             {
               "$type": "Document",
@@ -107,8 +105,7 @@
               "ToolTip": "D:\\09-Projects\\ADO DAL Code Generator\\Data-Access-Layer-Code-Generator\\CodeGenerator\\DALCodeGenerator\\Forms\\frmAddFunction.cs [Design]",
               "RelativeToolTip": "Forms\\frmAddFunction.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T08:58:18.232Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-16T08:58:18.232Z"
             },
             {
               "$type": "Document",
@@ -120,8 +117,7 @@
               "RelativeToolTip": "Forms\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMMBAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T07:29:33.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T07:29:33.87Z"
             },
             {
               "$type": "Document",
@@ -133,8 +129,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T08:58:13.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T08:58:13.538Z"
             }
           ]
         },

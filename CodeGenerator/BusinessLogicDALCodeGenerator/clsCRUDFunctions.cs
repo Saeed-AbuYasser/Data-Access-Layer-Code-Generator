@@ -212,22 +212,25 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             sp_Procedure? procedure = dto.StoredProcedures.FirstOrDefault(sp=>sp.OperationType == enCRUDOperations.ReadOneByOther);
             if(procedure == null)return "";
 
-            //Adding parameters to stored procedure
-            string parameters = string.Empty;
+            string SPparameters = string.Empty;
+            string FNParameters = string.Empty;
+            int NumOfPars = 0;
             foreach (var param in procedure.Parameters)
             {
                 if (!param.IsOutput)
                 {
-                    parameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{dto.Name.ToLower()}.{param.Name});{Environment.NewLine}                ";
+                    SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {
-                    parameters += $@"var Output{param.Name}Param = new SqlParameter(""@{param.Name}"", SqlDbType.{param.SqlDBType})
+                    SPparameters += $@"var Output{param.Name}Param = new SqlParameter(""@{param.Name}"", SqlDbType.{param.SqlDBType})
                 {{
                     Direction = ParameterDirection.Output
                 }};
                 command.Parameters.Add(Output{param.Name}Param);
                 ";
+                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
             }
 
@@ -240,7 +243,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             }
 
             string result = $@"
-    public static {dto.Name} {procedure.CommandName + procedure.EntityName}({dto.Properties.FirstOrDefault(pr => pr.IsMainUniqueID)!.DataType} {dto.Properties.FirstOrDefault(pr => pr.IsMainUniqueID)!.Name})
+    public static {dto.Name} {procedure.CommandName + procedure.EntityName}({FNParameters})
     {{
         {dto.Name} Source = new {dto.Name}();
         try
@@ -251,7 +254,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 using(SqlCommand command = new SqlCommand(""{procedure.OriginalName}"",connection))
                 {{
                     command.CommandType = CommandType.StoredProcedure;
-                    {parameters}
+                    {SPparameters}
                     
                     using (SqlDataReader Reader = command.ExecuteReader())
                     {{
@@ -343,10 +346,10 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             int NumOfPars = 0;
             foreach (var param in procedure.Parameters)
             {
-                if (param.IsOutput)
+                if (!param.IsOutput)
                 {
                     SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
-                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {
@@ -356,7 +359,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 }};
                 command.Parameters.Add(Output{param.Name}Param);
                 ";
-                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
             }
             
@@ -450,10 +453,10 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             int NumOfPars = 0;
             foreach (var param in procedure.Parameters)
             {
-                if (param.IsOutput)
+                if (!param.IsOutput)
                 {
                     SPparameters += $"command.Parameters.AddWithValue(\"@{param.Name}\",{param.Name});{Environment.NewLine}                ";
-                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
                 else
                 {
@@ -463,7 +466,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 }};
                 command.Parameters.Add(Output{param.Name}Param);
                 ";
-                    FNParameters += $"{dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
+                    FNParameters += $"out {dto.Properties.FirstOrDefault(pr => pr.Name == param.Name)!.DataType} {param.Name}{(++NumOfPars == procedure.Parameters.Count ? "" : ", ")}";
                 }
             }
 
