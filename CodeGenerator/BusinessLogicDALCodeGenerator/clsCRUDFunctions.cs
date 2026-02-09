@@ -53,7 +53,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             if (procedure == null) return "";
             string returnValue = string.Empty;
             string parameters = string.Empty;
-            cs_Property MainProperty = dto.Properties.FirstOrDefault(p => p.IsMainUniqueID)!;
+            cs_Property MainProperty = dto.Properties.FirstOrDefault(p => p.IsOutPut)!;
             foreach(var param in procedure.Parameters)
             {
                 if (!param.IsOutput)
@@ -75,9 +75,9 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
                 }
             }
             string result = $@"
-    public static {dto.Properties.FirstOrDefault(p=> p.IsMainUniqueID)!.DataType} {procedure.CommandName + procedure.EntityName}({dto.Name} {dto.Name.ToLower()})
+    public static {dto.Properties.FirstOrDefault(p=> p.IsOutPut)!.DataType} {procedure.CommandName + procedure.EntityName}({dto.Name} {dto.Name.ToLower()})
     {{
-        {dto.Properties.FirstOrDefault(p => p.IsMainUniqueID)!.DataType} result = default;
+        {dto.Properties.FirstOrDefault(p => p.IsOutPut)!.DataType} result = default;
         try
         {{
             using(SqlConnection connection = new SqlConnection(ConnectionString))
@@ -311,7 +311,7 @@ public static class cls_{dto.Name[..dto.Name.IndexOf("DTO")]}
             }
 
             string result = $@"
-    public static bool {procedure.CommandName + procedure.EntityName}({dto.Properties.FirstOrDefault(pr => pr.IsMainUniqueID)!.DataType} {dto.Properties.FirstOrDefault(pr => pr.IsMainUniqueID)!.Name})
+    public static bool {procedure.CommandName + procedure.EntityName}({dto.Properties.FirstOrDefault(pr => pr.IsOutPut)!.DataType} {dto.Properties.FirstOrDefault(pr => pr.IsOutPut)!.Name})
     {{
         bool result = false;
         try

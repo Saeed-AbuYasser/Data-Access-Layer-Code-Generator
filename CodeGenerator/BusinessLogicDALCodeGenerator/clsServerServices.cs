@@ -71,7 +71,7 @@ namespace BusinessLogicDALCodeGenerator.ServerInfo
     {
         public string Name { get; set; } = string.Empty;
         public string DataType { get; set; } = string.Empty;
-        public bool IsMainUniqueID { get; set; } = false;
+        public bool IsOutPut { get; set; } = false;
     }
     public class DTO
     {
@@ -564,15 +564,9 @@ namespace BusinessLogicDALCodeGenerator.ServerInfo
                 {
                     Name = parameter.Name,
                     DataType = GetCSharpTypeFromSql(parameter.SqlDBType, true),
-                    IsMainUniqueID = parameter.IsOutput
+                    IsOutPut = parameter.IsOutput
                 };
                 dto.Properties.Add(property);
-            }
-            
-            // Ensure at there is exactly one output parameter designated as the main unique ID
-            if (dto.Properties.Count(p => p.IsMainUniqueID) is > 1 or < 1)
-            {
-                throw new Exception("Either no output parameter or more than one parameter found in the create procedure to designate as the main unique ID." + Environment.NewLine + "Make sure that the create procedure has exactly one output parameter for the main unique identifier.");
             }
             
             return dto;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BusinessLogicDALCodeGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12309829a32cef0ad79e940a6a964d9b97c91f0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22cf55bcc0c3b385c0649986ff3e7ed088a0a39b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BusinessLogicDALCodeGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BusinessLogicDALCodeGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
