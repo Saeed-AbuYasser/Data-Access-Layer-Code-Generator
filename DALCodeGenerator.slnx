@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BusinessLogicDALCodeGenerator/BusinessLogicDALCodeGenerator.csproj" />
+  <Project Path="DALCodeGenerator/DALCodeGenerator.csproj" />
+</Solution>
